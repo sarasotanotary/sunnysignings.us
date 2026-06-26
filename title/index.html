@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title Company &amp; Closing Services | Sunny Signings</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#0096D6;--blue-bright:#00AEEF;--blue-light:#E0F6FF;--blue-mid:#0082BE;
+  --yellow:#FFE033;--yellow-warm:#FFCD00;--yellow-light:#FFFBE6;
+  --white:#FFFFFF;--offwhite:#F7FCFF;--text:#0A3A5C;--text-muted:#4A7A9B;
+  --serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+  --r:8px;--rlg:16px;--shadow:0 2px 16px rgba(0,150,214,0.10);
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--text);background:var(--white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
+nav{background:var(--white);border-bottom:2px solid var(--blue-light);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:70px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,150,214,0.08)}
+.nav-logo{display:flex;flex-direction:column;line-height:1.1}
+.nav-logo-top{font-family:var(--serif);font-size:1.55rem;color:var(--blue);font-weight:600}
+.nav-logo-top span{color:var(--yellow-warm);font-style:italic}
+.nav-logo-sub{font-size:0.78rem;color:var(--text-muted);letter-spacing:0.08em;text-transform:uppercase}
+.nav-links{display:flex;gap:2rem;list-style:none;align-items:center}
+.nav-links a{color:var(--text-muted);text-decoration:none;font-size:0.85rem;font-weight:400;letter-spacing:0.04em;text-transform:uppercase;transition:color 0.2s}
+.nav-links a:hover{color:var(--blue)}
+.nav-phone{color:var(--text);text-decoration:none;font-size:0.85rem;font-weight:600;letter-spacing:0.02em}
+.nav-phone:hover{color:var(--blue)}
+.nav-cta{background:var(--yellow)!important;color:var(--text)!important;padding:9px 22px;border-radius:var(--r);font-weight:600!important;box-shadow:0 2px 8px rgba(255,224,51,0.4)}
+.nav-cta:hover{background:var(--yellow-warm)!important;transform:translateY(-1px)}
+
+.hero{background:linear-gradient(160deg,var(--blue-bright) 0%,var(--blue) 55%,#0082BE 100%);min-height:440px;display:flex;align-items:center;position:relative;overflow:hidden;padding:4rem 2rem}
+.hero-wave{position:absolute;bottom:0;left:0;right:0;height:60px;background:var(--white);clip-path:ellipse(55% 100% at 50% 100%)}
+.hero-inner{max-width:760px;position:relative;z-index:2}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.18);border:1.5px solid rgba(255,255,255,0.4);color:var(--white);font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:6px 16px;border-radius:100px;margin-bottom:1.5rem}
+.hero h1{font-family:var(--serif);font-size:clamp(2rem,4.5vw,2.9rem);color:var(--white);line-height:1.2;margin-bottom:1.25rem;font-weight:600}
+.hero h1 em{color:var(--yellow);font-style:italic}
+.hero-sub{font-size:1.02rem;color:rgba(255,255,255,0.88);max-width:560px;margin-bottom:2rem;font-weight:300;line-height:1.75}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+.btn-primary{background:var(--yellow);color:var(--text);padding:14px 30px;border-radius:var(--r);font-weight:600;text-decoration:none;font-size:0.95rem;transition:all 0.2s;display:inline-block;box-shadow:0 4px 16px rgba(255,224,51,0.4)}
+.btn-primary:hover{background:var(--yellow-warm);transform:translateY(-2px)}
+.btn-outline{border:2px solid rgba(255,255,255,0.6);color:var(--white);padding:14px 28px;border-radius:var(--r);font-weight:400;text-decoration:none;font-size:0.95rem;transition:all 0.2s;display:inline-block}
+.btn-outline:hover{border-color:var(--yellow);color:var(--yellow)}
+.hero-areas{margin-top:2.25rem;display:flex;align-items:center;gap:0.5rem;flex-wrap:wrap}
+.hero-areas-label{font-size:0.78rem;color:rgba(255,255,255,0.6);letter-spacing:0.08em;text-transform:uppercase;margin-right:0.25rem}
+.area-pill{font-size:0.78rem;color:var(--white);background:rgba(255,255,255,0.15);padding:5px 14px;border-radius:100px;border:1px solid rgba(255,255,255,0.3)}
+
+.trust-bar{background:var(--yellow);padding:0.85rem 2rem;display:flex;justify-content:center;align-items:center;gap:2rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:0.6rem;font-size:0.85rem;color:var(--text);font-weight:500}
+.trust-dot{width:7px;height:7px;border-radius:50%;background:var(--blue);flex-shrink:0}
+.trust-divider{width:1px;height:36px;background:rgba(0,0,0,0.12);flex-shrink:0}
+
+section{padding:5rem 2rem}
+.section-inner{max-width:980px;margin:0 auto}
+.section-label{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue-bright);margin-bottom:0.75rem}
+.section-title{font-family:var(--serif);font-size:clamp(1.5rem,3.2vw,2.1rem);color:var(--text);margin-bottom:1rem;line-height:1.25}
+.section-desc{color:var(--text-muted);max-width:600px;font-size:1rem;font-weight:300;line-height:1.75}
+
+#services{background:var(--offwhite)}
+.services-header{margin-bottom:3rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1.5rem}
+.service-card{background:var(--white);border:2px solid var(--blue-light);border-radius:var(--rlg);padding:1.75rem;transition:all 0.2s;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.service-card:hover{border-color:var(--blue-bright);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,150,214,0.15)}
+.service-card::after{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue-bright),var(--yellow));transform:scaleX(0);transform-origin:left;transition:transform 0.3s}
+.service-card:hover::after{transform:scaleX(1)}
+.service-icon{width:50px;height:50px;background:var(--blue-light);border-radius:var(--r);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+.service-icon svg{width:24px;height:24px;stroke:var(--blue);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.service-card h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--text);margin-bottom:0.6rem}
+.service-card p{font-size:0.875rem;color:var(--text-muted);line-height:1.65;font-weight:300}
+
+#why{background:var(--white)}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin-top:3rem}
+.cred-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
+.cred-item{display:flex;align-items:flex-start;gap:0.85rem;font-size:0.9rem;color:var(--text-muted);font-weight:300;line-height:1.55}
+.cred-check{width:24px;height:24px;background:var(--blue-light);border:2px solid var(--blue-bright);border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.cred-check svg{width:11px;height:11px;stroke:var(--blue);fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat-box{background:var(--blue-light);border:2px solid rgba(0,174,239,0.2);border-radius:var(--rlg);padding:1.75rem 1.5rem;text-align:center}
+.stat-num{font-family:var(--serif);font-size:1.9rem;color:var(--blue);font-weight:600;display:block;line-height:1;margin-bottom:0.4rem}
+.stat-label{font-size:0.74rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.06em}
+
+#assurance{background:var(--blue-light)}
+.assurance-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;margin-top:3rem}
+.assurance-card{background:var(--white);border:2px solid rgba(0,174,239,0.15);border-radius:var(--rlg);padding:1.75rem;box-shadow:var(--shadow);text-align:center}
+.assurance-icon{width:48px;height:48px;margin:0 auto 1rem;background:var(--blue-light);border-radius:50%;display:flex;align-items:center;justify-content:center}
+.assurance-icon svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.assurance-card h3{font-family:var(--serif);font-size:1rem;font-weight:600;color:var(--text);margin-bottom:0.5rem}
+.assurance-card p{font-size:0.85rem;color:var(--text-muted);line-height:1.6;font-weight:300}
+
+#order{background:var(--offwhite)}
+.order-form-wrap{margin-top:3rem;background:var(--white);border:2px solid var(--blue-light);border-radius:var(--rlg);padding:2.25rem;box-shadow:var(--shadow)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-group{margin-bottom:1.1rem}
+.form-group label{display:block;font-size:0.72rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:6px}
+.form-group input,
+.form-group select,
+.form-group textarea{width:100%;padding:11px 14px;border:2px solid var(--blue-light);border-radius:var(--r);font-family:var(--sans);font-size:0.93rem;color:var(--text);background:var(--offwhite);transition:border-color 0.2s;appearance:none}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus{outline:none;border-color:var(--blue-bright);background:var(--white)}
+.form-group textarea{height:90px;resize:vertical}
+.service-radio-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px}
+.service-radio{display:flex;align-items:center;gap:8px;background:var(--offwhite);border:2px solid var(--blue-light);border-radius:var(--r);padding:10px 12px;cursor:pointer;font-size:0.85rem;color:var(--text);transition:border-color 0.15s;font-family:var(--sans)}
+.service-radio:hover{border-color:var(--blue-bright)}
+.service-radio input[type="radio"]{accent-color:var(--blue);width:15px;height:15px;flex-shrink:0;margin:0}
+.form-submit{width:100%;background:var(--yellow);color:var(--text);border:none;border-radius:var(--r);padding:20px;font-family:var(--sans);font-size:1.1rem;font-weight:600;cursor:pointer;margin-top:0.5rem;transition:all 0.2s;box-shadow:0 4px 16px rgba(255,224,51,0.4)}
+.form-submit:hover{background:var(--yellow-warm);transform:translateY(-2px)}
+.form-submit:active{transform:scale(0.98)}
+.form-note{font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;font-weight:300}
+.form-confirm{display:none;text-align:center;padding:2.5rem 1.5rem}
+.form-confirm h3{font-family:var(--serif);color:var(--text);font-size:1.3rem;margin-bottom:0.6rem}
+.form-confirm p{color:var(--text-muted);font-size:0.92rem;font-weight:300}
+
+.contact-strip{text-align:center;margin-top:2rem;padding:1.75rem;background:var(--yellow-light);border-radius:var(--rlg);border:2px solid rgba(255,205,0,0.3)}
+.contact-strip p{font-size:0.88rem;color:var(--text-muted);margin-bottom:0.5rem;font-weight:300}
+.contact-strip a{color:var(--blue);font-weight:600;text-decoration:none;font-size:1rem}
+.contact-strip a:hover{color:var(--blue-mid)}
+
+footer{background:var(--text);color:rgba(255,255,255,0.55);padding:2.5rem 2rem;text-align:center;font-size:0.82rem;font-weight:300}
+footer a{color:var(--yellow);text-decoration:none}
+.footer-logo-top{font-family:var(--serif);font-size:1.2rem;color:var(--white);margin-bottom:2px}
+.footer-logo-top span{color:var(--yellow);font-style:italic}
+.footer-logo-sub{font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem}
+@media(max-width:640px){.why-grid,.form-row,.service-radio-grid{grid-template-columns:1fr}.nav-links{display:none}.trust-bar{gap:1.25rem}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S9H6G1NXDW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-S9H6G1NXDW');
+</script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-top"><span>Sunny</span> Signings</div>
+    <div class="nav-logo-sub">Title &amp; Closing Services</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="tel:9415002495" class="nav-phone">📞 (941) 500-2495</a></li>
+    <li><a href="#order" class="nav-cta">Place an Order</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-wave"></div>
+  <div class="hero-inner">
+    <div class="hero-badge">📋 &nbsp;For Title Companies &amp; Real Estate Attorneys</div>
+    <h1>Closing coverage you can <em>count on</em>, across Southwest Florida.</h1>
+    <p class="hero-sub">Sunny Signings is your dedicated mobile closing partner for Sarasota, Manatee, Charlotte, Lee, and Collier counties — accurate signings, fast confirmations, and documents back in your hands without the chase.</p>
+    <div class="hero-actions">
+      <a href="#order" class="btn-primary">Place an Order</a>
+      <a href="tel:9415002495" class="btn-outline">Call (941) 500-2495</a>
+    </div>
+    <div class="hero-areas">
+      <span class="hero-areas-label">Coverage area</span>
+      <span class="area-pill">Sarasota</span>
+      <span class="area-pill">Manatee</span>
+      <span class="area-pill">Charlotte</span>
+      <span class="area-pill">Lee</span>
+      <span class="area-pill">Collier</span>
+    </div>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <div class="trust-item"><div class="trust-dot"></div>NNA Certified Signing Agent</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><div class="trust-dot"></div>$1,000,000 E&amp;O Coverage</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><div class="trust-dot"></div>Loan Signing System Trained</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><div class="trust-dot"></div>Background Checked &amp; Bonded</div>
+  <div class="trust-divider"></div>
+  <div class="trust-item"><div class="trust-dot"></div>Same-Day / Next-Business-Day Availability</div>
+</div>
+
+<section id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <div class="section-label">Closing services</div>
+      <h2 class="section-title">Built for the orders title companies actually send</h2>
+      <p class="section-desc">Every signing handled with the same accuracy and care, whatever the file type or how tight the timeline.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+        <h3>Purchase Closings</h3>
+        <p>Buyer and seller signings handled with precision — every initial, date, and notarization where it needs to be.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17.657 18.657A8 8 0 116.343 7.343 8 8 0 0117.657 18.657zM15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <h3>Refinances</h3>
+        <p>Quick-turn refi signings, including last-minute rescheduling when a borrower's timeline shifts.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l1 1h1m8-1V8a1 1 0 011-1h2l3 3v6l-1 1h-1m-6 0h6"/></svg></div>
+        <h3>HELOCs &amp; Equity Lines</h3>
+        <p>Comfortable with the additional disclosures and rescission timelines that come with home equity products.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Reverse Mortgage Signings</h3>
+        <p>Patient, senior-friendly signings. We never rush a borrower and confirm understanding before anything is signed.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+        <h3>POAs, Deeds &amp; Affidavits</h3>
+        <p>Standalone real estate documents notarized and returned quickly when a full closing isn't needed.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>
+        <h3>Rush &amp; Same-Day Requests</h3>
+        <p>Last-minute closings happen. We hold flexible availability specifically to cover them.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="section-inner">
+    <div class="section-label">Why closing teams work with us</div>
+    <h2 class="section-title">One point of contact, zero surprises</h2>
+    <p class="section-desc">We know what makes a closing team's day harder — a signer who doesn't show, a package that comes back with a missed initial, a notary who's hard to reach. We built our process to eliminate all three.</p>
+    <div class="why-grid">
+      <ul class="cred-list">
+        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Confirmation call or text to the borrower before every appointment</li>
+        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Package review on-site for missed signatures, dates, or initials before leaving the table</li>
+        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Scan-backs and status updates sent the same day</li>
+        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Trained through the Loan Signing System and certified through the NNA</li>
+        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Background checked, bonded, and covered by $1,000,000 in E&amp;O insurance</li>
+        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Direct cell access — no call center, no ticket queue</li>
+      </ul>
+      <div class="stat-grid">
+        <div class="stat-box"><span class="stat-num">5</span><span class="stat-label">Counties Covered</span></div>
+        <div class="stat-box"><span class="stat-num">$1M</span><span class="stat-label">E&amp;O Coverage</span></div>
+        <div class="stat-box"><span class="stat-num">NNA</span><span class="stat-label">Certified</span></div>
+        <div class="stat-box"><span class="stat-num">24/7</span><span class="stat-label">Order Intake</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="assurance">
+  <div class="section-inner">
+    <div class="section-label">What you're covered by</div>
+    <h2 class="section-title">Built so your closing isn't the thing that goes wrong</h2>
+    <div class="assurance-grid">
+      <div class="assurance-card">
+        <div class="assurance-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Bonded &amp; Insured</h3>
+        <p>$1,000,000 in Errors &amp; Omissions coverage on every file we touch.</p>
+      </div>
+      <div class="assurance-card">
+        <div class="assurance-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5.5 21a6.5 6.5 0 0113 0"/></svg></div>
+        <h3>Background Checked</h3>
+        <p>Every signing agent vetted before they're ever sent to your borrower's table.</p>
+      </div>
+      <div class="assurance-card">
+        <div class="assurance-icon"><svg viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>Same-Day / Next-Business-Day</h3>
+        <p>Order intake runs around the clock, with flexible scheduling for rush closings.</p>
+      </div>
+      <div class="assurance-card">
+        <div class="assurance-icon"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+        <h3>Loan Signing System Trained</h3>
+        <p>Trained on the industry's leading certification curriculum for loan documents.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="order">
+  <div class="section-inner">
+    <div class="section-label">Send us a closing</div>
+    <h2 class="section-title">Place an order</h2>
+    <p class="section-desc">Send over the file details below and we'll confirm coverage and scheduling — usually within the hour.</p>
+
+        <div class="order-form-wrap">
+      <form action="https://formspree.io/f/meebopzl" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company">Title Company / Firm</label>
+            <input type="text" id="company" name="company" placeholder="Sunshine Title Co." required>
+          </div>
+          <div class="form-group">
+            <label for="contact_name">Contact Name</label>
+            <input type="text" id="contact_name" name="contact_name" placeholder="Jane Smith" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@title.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(941) 555-0100" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Order Type</label>
+          <div class="service-radio-grid">
+            <label class="service-radio"><input type="radio" name="order_type" value="Purchase Closing" checked> 🏡 Purchase Closing</label>
+            <label class="service-radio"><input type="radio" name="order_type" value="Refinance"> 🔄 Refinance</label>
+            <label class="service-radio"><input type="radio" name="order_type" value="HELOC"> 📑 HELOC / Equity Line</label>
+            <label class="service-radio"><input type="radio" name="order_type" value="Reverse Mortgage"> 🧓 Reverse Mortgage</label>
+            <label class="service-radio"><input type="radio" name="order_type" value="POA / Deed / Affidavit"> 📋 POA / Deed / Affidavit</label>
+            <label class="service-radio"><input type="radio" name="order_type" value="Other"> ✏️ Other</label>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="file_number">File / Order Number</label>
+            <input type="text" id="file_number" name="file_number" placeholder="e.g. 2026-04521">
+          </div>
+          <div class="form-group">
+            <label for="county">Property County</label>
+            <select id="county" name="county">
+              <option value="">Select a county...</option>
+              <option>Sarasota</option>
+              <option>Manatee</option>
+              <option>Charlotte</option>
+              <option>Lee</option>
+              <option>Collier</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="closing_date">Closing Date</label>
+            <input type="date" id="closing_date" name="closing_date">
+          </div>
+          <div class="form-group">
+            <label for="closing_time">Closing Time</label>
+            <input type="time" id="closing_time" name="closing_time">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="location">Signing Location / Address</label>
+          <input type="text" id="location" name="location" placeholder="Borrower's address, office, or other meeting location">
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional Details</label>
+          <textarea id="notes" name="notes" placeholder="Number of signers, edocs vs. wet-sign, rush request, special instructions, etc."></textarea>
+        </div>
+        <button type="submit" class="form-submit">📋 &nbsp;Submit Order</button>
+        <p class="form-note">We confirm coverage and scheduling within 1 business hour · Rush requests welcome — just note it above.</p>
+      </form>
+    </div>
+
+    <div class="contact-strip">
+      <p>Prefer to send this over directly? We're happy to take it by phone or email.</p>
+      <a href="tel:9415002495">(941) 500-2495</a> &nbsp;·&nbsp; <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo-top"><span>Sunny</span> Signings</div>
+  <div class="footer-logo-sub">Title &amp; Closing Services</div>
+  <p>Serving Sarasota · Manatee · Charlotte · Lee · Collier Counties</p>
+  <p style="margin-top:0.4rem">
+    <a href="tel:9415002495">(941) 500-2495</a> &nbsp;·&nbsp;
+    <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
+  </p>
+  <p style="margin-top:1rem;font-size:0.75rem;opacity:0.45">© 2026 Sunny Signings · sunnysignings.us · All rights reserved.</p>
+</footer>
+
+</body>
+</html>
