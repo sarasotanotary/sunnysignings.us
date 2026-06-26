@@ -10,11 +10,11 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --blue:#0096D6;--blue-bright:#00AEEF;--blue-light:#E0F6FF;--blue-mid:#0082BE;
-  --yellow:#FFE033;--yellow-warm:#FFCD00;--yellow-light:#FFFBE6;
-  --white:#FFFFFF;--offwhite:#F7FCFF;--text:#0A3A5C;--text-muted:#4A7A9B;
-  --serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
-  --r:8px;--rlg:16px;--shadow:0 2px 16px rgba(0,150,214,0.10);
+--blue:#0096D6;--blue-bright:#00AEEF;--blue-light:#E0F6FF;--blue-mid:#0082BE;
+--yellow:#FFE033;--yellow-warm:#FFCD00;--yellow-light:#FFFBE6;
+--white:#FFFFFF;--offwhite:#F7FCFF;--text:#0A3A5C;--text-muted:#4A7A9B;
+--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif;
+--r:8px;--rlg:16px;--shadow:0 2px 16px rgba(0,150,214,0.10);
 }
 html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--text);background:var(--white);line-height:1.6;font-size:16px;-webkit-font-smoothing:antialiased}
@@ -91,7 +91,6 @@ section{padding:5rem 2rem}
 .review-text{font-size:0.9rem;color:var(--text-muted);line-height:1.7;font-style:italic;font-family:var(--serif);margin-bottom:1.25rem}
 .review-author{font-size:0.85rem;font-weight:600;color:var(--text)}
 .review-loc{font-size:0.78rem;color:var(--blue-bright);margin-top:2px;font-weight:400}
-
 /* ── BOOKING FORM ── */
 #book{background:var(--offwhite)}
 .book-form-wrap{margin-top:3rem;background:var(--white);border:2px solid var(--blue-light);border-radius:var(--rlg);padding:2.25rem;box-shadow:var(--shadow)}
@@ -113,7 +112,6 @@ section{padding:5rem 2rem}
 .form-submit:hover{background:var(--yellow-warm);transform:translateY(-2px)}
 .form-submit:active{transform:scale(0.98)}
 .form-note{font-size:0.78rem;color:var(--text-muted);text-align:center;margin-top:0.75rem;font-weight:300}
-
 .contact-strip{text-align:center;margin-top:2rem;padding:1.75rem;background:var(--yellow-light);border-radius:var(--rlg);border:2px solid rgba(255,205,0,0.3)}
 .contact-strip p{font-size:0.88rem;color:var(--text-muted);margin-bottom:0.5rem;font-weight:300}
 .contact-strip a{color:var(--blue);font-weight:600;text-decoration:none;font-size:1rem}
@@ -131,249 +129,241 @@ footer a{color:var(--yellow);text-decoration:none}
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9H6G1NXDW"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-S9H6G1NXDW');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-S9H6G1NXDW');
 </script>
 </head>
 <body>
-
 <nav>
-  <div class="nav-logo">
-    <div class="nav-logo-top"><span>Sunny</span> Signings</div>
-    <div class="nav-logo-sub">Suncoast Mobile Notary</div>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#testimonials">Reviews</a></li>
-    <li><a href="tel:9415002495" class="nav-phone">📞 (941) 500-2495</a></li>
-    <li><a href="#book" class="nav-cta">Book Now</a></li>
-  </ul>
+<div class="nav-logo">
+<div class="nav-logo-top"><span>Sunny</span> Signings</div>
+<div class="nav-logo-sub">Suncoast Mobile Notary</div>
+</div>
+<ul class="nav-links">
+<li><a href="#services">Services</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#testimonials">Reviews</a></li>
+<li><a href="/title/">Title Companies</a></li>
+<li><a href="tel:9415002495" class="nav-phone">📞 (941) 500-2495</a></li>
+<li><a href="#book" class="nav-cta">Book Now</a></li>
+</ul>
 </nav>
-
 <section class="hero">
-  <div class="hero-sun"></div>
-  <div class="hero-wave"></div>
-  <div class="hero-inner">
-    <div class="hero-badge">☀️ &nbsp;Southwest Florida's Trusted Notary Service</div>
-    <h1>We come to you —<br><em>anywhere in paradise.</em></h1>
-    <p class="hero-sub">Whether you're a Florida resident or visiting, Suncoast Mobile Notary makes signing easy. We come to your home, condo, hotel, or office — on your schedule.</p>
-    <div class="hero-actions">
-      <a href="#book" class="btn-primary">Book an Appointment</a>
-      <a href="#services" class="btn-outline">Our Services</a>
-    </div>
-    <div class="hero-areas">
-      <span class="hero-areas-label">Serving</span>
-      <span class="area-pill">Sarasota</span>
-      <span class="area-pill">Manatee</span>
-      <span class="area-pill">Charlotte</span>
-      <span class="area-pill">Lee</span>
-      <span class="area-pill">Collier</span>
-    </div>
-  </div>
+<div class="hero-sun"></div>
+<div class="hero-wave"></div>
+<div class="hero-inner">
+<div class="hero-badge">☀️ &nbsp;Southwest Florida's Trusted Notary Service</div>
+<h1>We come to you —<br><em>anywhere in paradise.</em></h1>
+<p class="hero-sub">Whether you're a Florida resident or visiting, Suncoast Mobile Notary makes signing easy. We come to your home, condo, hotel, or office — on your schedule.</p>
+<div class="hero-actions">
+<a href="#book" class="btn-primary">Book an Appointment</a>
+<a href="#services" class="btn-outline">Our Services</a>
+</div>
+<div class="hero-areas">
+<span class="hero-areas-label">Serving</span>
+<span class="area-pill">Sarasota</span>
+<span class="area-pill">Manatee</span>
+<span class="area-pill">Charlotte</span>
+<span class="area-pill">Lee</span>
+<span class="area-pill">Collier</span>
+</div>
+</div>
 </section>
-
 <div class="trust-bar">
-  <img src="nna_cert_logo.jpg" alt="NNA Certified Signing Agent" class="trust-logo-nna" />
-  <div class="trust-divider"></div>
-  <img src="fidelity.png" alt="Fidelity National Title Approved" class="trust-logo-fidelity" />
-  <div class="trust-divider"></div>
-  <div class="trust-badge-fl"><span>FL</span>State<br>Notary</div>
-  <div class="trust-divider"></div>
-  <div class="trust-item"><div class="trust-dot"></div>Loan Signing System Trained</div>
-  <div class="trust-item"><div class="trust-dot"></div>Background Checked</div>
-  <div class="trust-item"><div class="trust-dot"></div>Bonded &amp; Insured</div>
-  <div class="trust-item"><div class="trust-dot"></div>Expedited Service Available</div>
+<img src="nna_cert_logo.jpg" alt="NNA Certified Signing Agent" class="trust-logo-nna" />
+<div class="trust-divider"></div>
+<img src="fidelity.png" alt="Fidelity National Title Approved" class="trust-logo-fidelity" />
+<div class="trust-divider"></div>
+<div class="trust-badge-fl"><span>FL</span>State<br>Notary</div>
+<div class="trust-divider"></div>
+<div class="trust-item"><div class="trust-dot"></div>Loan Signing System Trained</div>
+<div class="trust-item"><div class="trust-dot"></div>Background Checked</div>
+<div class="trust-item"><div class="trust-dot"></div>Bonded &amp; Insured</div>
+<div class="trust-item"><div class="trust-dot"></div>Expedited Service Available</div>
 </div>
-
 <div class="snowbird">
-  <p>🐦 <strong>Snowbird friendly!</strong> Whether you've come from another state or another country, we make it effortless — no unfamiliar offices, no hassle, no wasted time. We come to your condo, rental, or resort so you can get back to enjoying the sunshine.</p>
-  <p style="margin-top:0.6rem">❤️ <strong>Senior friendly too.</strong> We take extra care with every client — especially for reverse mortgage signings. We never rush and make sure you feel completely comfortable before anything is signed.</p>
+<p>🐦 <strong>Snowbird friendly!</strong> Whether you've come from another state or another country, we make it effortless — no unfamiliar offices, no hassle, no wasted time. We come to your condo, rental, or resort so you can get back to enjoying the sunshine.</p>
+<p style="margin-top:0.6rem">❤️ <strong>Senior friendly too.</strong> We take extra care with every client — especially for reverse mortgage signings. We never rush and make sure you feel completely comfortable before anything is signed.</p>
 </div>
-
 <section id="services">
-  <div class="section-inner">
-    <div class="services-header">
-      <div class="section-label">What we do</div>
-      <h2 class="section-title">Every signing, handled with care</h2>
-      <p class="section-desc">From routine notarizations to complex real estate closings — professional service delivered to your door anywhere in Southwest Florida.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
-        <h3>Mobile Notary</h3>
-        <p>We come to you — home, condo, hotel, office, or hospital. Powers of attorney, wills, trusts, affidavits, and more. Flexible scheduling on your terms.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
-        <h3>Real Estate Closings</h3>
-        <p>Seamless loan signings, purchase closings, and refinances for title agents and lenders. Accurate, efficient, and stress-free every time.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>
-        <h3>Apostille Service</h3>
-        <p>Documents authenticated for international use — birth certificates, powers of attorney, diplomas, and more. Fast, accurate, globally compliant.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l1 1h1m8-1V8a1 1 0 011-1h2l3 3v6l-1 1h-1m-6 0h6"/></svg></div>
-        <h3>Auto Title &amp; VIN Verification</h3>
-        <p>Buying or selling a vehicle while in Florida? We handle title transfers, bills of sale, and DMV documents at your location.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg></div>
-        <h3>Construction Draw Inspections</h3>
-        <p>Detailed field and draw inspections for lenders covering construction progress, property, vehicles, and equipment. Clear, reliable reports.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
-        <h3>Nationwide Signing Network</h3>
-        <p>Need a signing outside our region? Our certified nationwide network handles loan signings and legal documents anywhere in the country.</p>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="services-header">
+<div class="section-label">What we do</div>
+<h2 class="section-title">Every signing, handled with care</h2>
+<p class="section-desc">From routine notarizations to complex real estate closings — professional service delivered to your door anywhere in Southwest Florida.</p>
+</div>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+<h3>Mobile Notary</h3>
+<p>We come to you — home, condo, hotel, office, or hospital. Powers of attorney, wills, trusts, affidavits, and more. Flexible scheduling on your terms.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
+<h3>Real Estate Closings</h3>
+<p>Seamless loan signings, purchase closings, and refinances for title agents and lenders. Accurate, efficient, and stress-free every time.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg></div>
+<h3>Apostille Service</h3>
+<p>Documents authenticated for international use — birth certificates, powers of attorney, diplomas, and more. Fast, accurate, globally compliant.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z"/><path d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10l1 1h1m8-1V8a1 1 0 011-1h2l3 3v6l-1 1h-1m-6 0h6"/></svg></div>
+<h3>Auto Title &amp; VIN Verification</h3>
+<p>Buying or selling a vehicle while in Florida? We handle title transfers, bills of sale, and DMV documents at your location.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg></div>
+<h3>Construction Draw Inspections</h3>
+<p>Detailed field and draw inspections for lenders covering construction progress, property, vehicles, and equipment. Clear, reliable reports.</p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+<h3>Nationwide Signing Network</h3>
+<p>Need a signing outside our region? Our certified nationwide network handles loan signings and legal documents anywhere in the country.</p>
+</div>
+</div>
+</div>
 </section>
-
 <section id="about">
-  <div class="section-inner">
-    <div class="section-label">Why choose us</div>
-    <h2 class="section-title">The gold standard in signing professionals</h2>
-    <p class="section-desc">Our agents are meticulously vetted, rigorously trained, and committed to accuracy — every signature, every time.</p>
-    <div class="about-grid">
-      <ul class="cred-list">
-        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Trained through the Loan Signing System — the industry's leading certification program</li>
-        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Certified through the National Notary Association (NNA)</li>
-        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Rigorous background checks — every agent, no exceptions</li>
-        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Bonded and insured for your complete peace of mind</li>
-        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Flexible scheduling including evenings and weekends</li>
-        <li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Expedited service available for urgent signings</li>
-      </ul>
-      <div class="stat-grid">
-        <div class="stat-box"><span class="stat-num">5</span><span class="stat-label">Counties Served</span></div>
-        <div class="stat-box"><span class="stat-num">6</span><span class="stat-label">Service Types</span></div>
-        <div class="stat-box"><span class="stat-num">NNA</span><span class="stat-label">Certified</span></div>
-        <div class="stat-box"><span class="stat-num">24/7</span><span class="stat-label">Scheduling</span></div>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-label">Why choose us</div>
+<h2 class="section-title">The gold standard in signing professionals</h2>
+<p class="section-desc">Our agents are meticulously vetted, rigorously trained, and committed to accuracy — every signature, every time.</p>
+<div class="about-grid">
+<ul class="cred-list">
+<li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Trained through the Loan Signing System — the industry's leading certification program</li>
+<li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Certified through the National Notary Association (NNA)</li>
+<li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Rigorous background checks — every agent, no exceptions</li>
+<li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Bonded and insured for your complete peace of mind</li>
+<li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Flexible scheduling including evenings and weekends</li>
+<li class="cred-item"><div class="cred-check"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></div>Expedited service available for urgent signings</li>
+</ul>
+<div class="stat-grid">
+<div class="stat-box"><span class="stat-num">5</span><span class="stat-label">Counties Served</span></div>
+<div class="stat-box"><span class="stat-num">6</span><span class="stat-label">Service Types</span></div>
+<div class="stat-box"><span class="stat-num">NNA</span><span class="stat-label">Certified</span></div>
+<div class="stat-box"><span class="stat-num">24/7</span><span class="stat-label">Scheduling</span></div>
+</div>
+</div>
+</div>
 </section>
-
 <section id="testimonials">
-  <div class="section-inner">
-    <div class="section-label">Client reviews</div>
-    <h2 class="section-title">Trusted across Southwest Florida</h2>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-        <p class="review-text">"Getting an apostille for my daughter was stressing me out, but Suncoast Mobile Notary made it so easy. The notary came to my house, walked me through everything, and I had my documents ready to send to France in no time."</p>
-        <div class="review-author">Laura M.</div><div class="review-loc">Venice, FL</div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-        <p class="review-text">"I needed a title transfer for my car sale. A mobile notary met me at a coffee shop near my home and the whole process took less than 15 minutes. Knowledgeable and made sure everything was done right."</p>
-        <div class="review-author">Mike R.</div><div class="review-loc">Bradenton, FL</div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
-        <p class="review-text">"Made our home closing a breeze! The loan signing agent came to our office on short notice and handled all the paperwork with professionalism. It saved us so much time. Highly recommend!"</p>
-        <div class="review-author">Sarah T.</div><div class="review-loc">Sarasota, FL</div>
-      </div>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-label">Client reviews</div>
+<h2 class="section-title">Trusted across Southwest Florida</h2>
+<div class="reviews-grid">
+<div class="review-card">
+<div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+<p class="review-text">"Getting an apostille for my daughter was stressing me out, but Suncoast Mobile Notary made it so easy. The notary came to my house, walked me through everything, and I had my documents ready to send to France in no time."</p>
+<div class="review-author">Laura M.</div><div class="review-loc">Venice, FL</div>
+</div>
+<div class="review-card">
+<div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+<p class="review-text">"I needed a title transfer for my car sale. A mobile notary met me at a coffee shop near my home and the whole process took less than 15 minutes. Knowledgeable and made sure everything was done right."</p>
+<div class="review-author">Mike R.</div><div class="review-loc">Bradenton, FL</div>
+</div>
+<div class="review-card">
+<div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+<p class="review-text">"Made our home closing a breeze! The loan signing agent came to our office on short notice and handled all the paperwork with professionalism. It saved us so much time. Highly recommend!"</p>
+<div class="review-author">Sarah T.</div><div class="review-loc">Sarasota, FL</div>
+</div>
+</div>
+</div>
 </section>
-
 <section id="book">
-  <div class="section-inner">
-    <div class="section-label">Get started</div>
-    <h2 class="section-title">Book your appointment today</h2>
-    <p class="section-desc">We make every signing simple and stress-free — whether you're a local resident or enjoying Florida for the season.</p>
-
-    <div class="book-form-wrap">
-      <form action="https://formspree.io/f/xaqgnlbq" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="first_name">First Name</label>
-            <input type="text" id="first_name" name="first_name" placeholder="Jane" required>
-          </div>
-          <div class="form-group">
-            <label for="last_name">Last Name</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Smith" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="jane@email.com" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" placeholder="(941) 555-0100">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Service Needed</label>
-          <div class="service-radio-grid">
-            <label class="service-radio"><input type="radio" name="service" value="Mobile Notary" checked> 📋 Mobile Notary</label>
-            <label class="service-radio"><input type="radio" name="service" value="Real Estate Closing"> 🏡 Real Estate Closing</label>
-            <label class="service-radio"><input type="radio" name="service" value="Apostille"> 🌐 Apostille</label>
-            <label class="service-radio"><input type="radio" name="service" value="Estate Planning"> 📜 Estate Planning</label>
-            <label class="service-radio"><input type="radio" name="service" value="Auto Title"> 🚗 Auto Title</label>
-            <label class="service-radio"><input type="radio" name="service" value="Draw Inspection"> 🔍 Draw Inspection</label>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="date">Preferred Date</label>
-            <input type="date" id="date" name="preferred_date">
-          </div>
-          <div class="form-group">
-            <label for="time">Preferred Time</label>
-            <select id="time" name="preferred_time">
-              <option value="">Select a time...</option>
-              <option>Morning (8am – 12pm)</option>
-              <option>Afternoon (12pm – 5pm)</option>
-              <option>Evening (5pm – 8pm)</option>
-              <option>Flexible</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="location">Signing Location / City</label>
-          <input type="text" id="location" name="location" placeholder="e.g. Sarasota, Naples, hotel name...">
-        </div>
-        <div class="form-group">
-          <label for="notes">Anything else we should know?</label>
-          <textarea id="notes" name="notes" placeholder="Special instructions, mobility needs, expedited request, etc."></textarea>
-        </div>
-        <button type="submit" class="form-submit">☀️ &nbsp;Request My Appointment</button>
-        <p class="form-note">We'll confirm within 1 business hour · Expedited requests welcome — just mention it above.</p>
-      </form>
-    </div>
-
-    <div class="contact-strip">
-      <p>Prefer to reach out directly? We're happy to help!</p>
-      <a href="tel:9415002495">(941) 500-2495</a> &nbsp;·&nbsp; <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
-    </div>
-
-    <div class="join-banner">
-      <h2>Become a Signing Agent</h2>
-      <p>Earn income as a certified notary public loan signing agent. Get trained through the industry-leading Loan Signing System and join our growing team.</p>
-      <a href="https://www.loansigningsystem.com/?afmc=2cn" class="btn-primary" target="_blank" rel="noopener">Learn More</a>
-    </div>
-  </div>
+<div class="section-inner">
+<div class="section-label">Get started</div>
+<h2 class="section-title">Book your appointment today</h2>
+<p class="section-desc">We make every signing simple and stress-free — whether you're a local resident or enjoying Florida for the season.</p>
+<div class="book-form-wrap">
+<form action="https://formspree.io/f/xaqgnlbq" method="POST">
+<div class="form-row">
+<div class="form-group">
+<label for="first_name">First Name</label>
+<input type="text" id="first_name" name="first_name" placeholder="Jane" required>
+</div>
+<div class="form-group">
+<label for="last_name">Last Name</label>
+<input type="text" id="last_name" name="last_name" placeholder="Smith" required>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="jane@email.com" required>
+</div>
+<div class="form-group">
+<label for="phone">Phone</label>
+<input type="tel" id="phone" name="phone" placeholder="(941) 555-0100">
+</div>
+</div>
+<div class="form-group">
+<label>Service Needed</label>
+<div class="service-radio-grid">
+<label class="service-radio"><input type="radio" name="service" value="Mobile Notary" checked> 📋 Mobile Notary</label>
+<label class="service-radio"><input type="radio" name="service" value="Real Estate Closing"> 🏡 Real Estate Closing</label>
+<label class="service-radio"><input type="radio" name="service" value="Apostille"> 🌐 Apostille</label>
+<label class="service-radio"><input type="radio" name="service" value="Estate Planning"> 📜 Estate Planning</label>
+<label class="service-radio"><input type="radio" name="service" value="Auto Title"> 🚗 Auto Title</label>
+<label class="service-radio"><input type="radio" name="service" value="Draw Inspection"> 🔍 Draw Inspection</label>
+</div>
+</div>
+<div class="form-row">
+<div class="form-group">
+<label for="date">Preferred Date</label>
+<input type="date" id="date" name="preferred_date">
+</div>
+<div class="form-group">
+<label for="time">Preferred Time</label>
+<select id="time" name="preferred_time">
+<option value="">Select a time...</option>
+<option>Morning (8am – 12pm)</option>
+<option>Afternoon (12pm – 5pm)</option>
+<option>Evening (5pm – 8pm)</option>
+<option>Flexible</option>
+</select>
+</div>
+</div>
+<div class="form-group">
+<label for="location">Signing Location / City</label>
+<input type="text" id="location" name="location" placeholder="e.g. Sarasota, Naples, hotel name...">
+</div>
+<div class="form-group">
+<label for="notes">Anything else we should know?</label>
+<textarea id="notes" name="notes" placeholder="Special instructions, mobility needs, expedited request, etc."></textarea>
+</div>
+<button type="submit" class="form-submit">☀️ &nbsp;Request My Appointment</button>
+<p class="form-note">We'll confirm within 1 business hour · Expedited requests welcome — just mention it above.</p>
+</form>
+</div>
+<div class="contact-strip">
+<p>Prefer to reach out directly? We're happy to help!</p>
+<a href="tel:9415002495">(941) 500-2495</a> &nbsp;·&nbsp; <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
+</div>
+<div class="join-banner">
+<h2>Become a Signing Agent</h2>
+<p>Earn income as a certified notary public loan signing agent. Get trained through the industry-leading Loan Signing System and join our growing team.</p>
+<a href="https://www.loansigningsystem.com/?afmc=2cn" class="btn-primary" target="_blank" rel="noopener">Learn More</a>
+</div>
+</div>
 </section>
-
 <footer>
-  <div class="footer-logo-top"><span>Sunny</span> Signings</div>
-  <div class="footer-logo-sub">Suncoast Mobile Notary</div>
-  <p>Serving Sarasota · Manatee · Charlotte · Lee · Collier Counties</p>
-  <p style="margin-top:0.4rem">
-    <a href="tel:9415002495">(941) 500-2495</a> &nbsp;·&nbsp;
-    <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
-  </p>
-  <p style="margin-top:1rem;font-size:0.75rem;opacity:0.45">© 2026 Suncoast Mobile Notary · sunnysignings.us · All rights reserved.</p>
+<div class="footer-logo-top"><span>Sunny</span> Signings</div>
+<div class="footer-logo-sub">Suncoast Mobile Notary</div>
+<p>Serving Sarasota · Manatee · Charlotte · Lee · Collier Counties</p>
+<p style="margin-top:0.4rem">
+<a href="tel:9415002495">(941) 500-2495</a> &nbsp;·&nbsp;
+<a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
+</p>
+<p style="margin-top:0.75rem;font-size:0.78rem">
+<a href="/title/">Title Companies &amp; Real Estate Attorneys →</a>
+</p>
+<p style="margin-top:1rem;font-size:0.75rem;opacity:0.45">© 2026 Suncoast Mobile Notary · sunnysignings.us · All rights reserved.</p>
 </footer>
-
 </body>
 </html>
+
