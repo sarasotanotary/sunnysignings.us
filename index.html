@@ -124,7 +124,9 @@ footer a{color:var(--yellow);text-decoration:none}
 .footer-logo-top{font-family:var(--serif);font-size:1.2rem;color:var(--white);margin-bottom:2px}
 .footer-logo-top span{color:var(--yellow);font-style:italic}
 .footer-logo-sub{font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:0.75rem}
-@media(max-width:640px){.about-grid,.form-row,.service-radio-grid{grid-template-columns:1fr}.nav-links{display:none}.trust-bar{gap:1.25rem}}
+@media(max-width:640px){.about-grid,.form-row,.service-radio-grid{grid-template-columns:1fr}.trust-bar{gap:1.25rem}}
+.nav-toggle{display:none;background:none;border:2px solid var(--blue-light);border-radius:8px;padding:8px 12px;font-family:inherit;font-weight:600;font-size:0.85rem;color:var(--blue);cursor:pointer;letter-spacing:0.04em;text-transform:uppercase}
+@media(max-width:900px){nav{flex-wrap:wrap;height:auto;min-height:70px;padding:10px 1.25rem}.nav-toggle{display:block}.nav-links{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:8px 0}.nav-links.open{display:flex}.nav-links li a{display:block;padding:12px 4px;border-top:1px solid var(--blue-light)}.nav-links .nav-cta{text-align:center;margin-top:8px}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S9H6G1NXDW"></script>
@@ -141,8 +143,10 @@ gtag('config', 'G-S9H6G1NXDW');
 <div class="nav-logo-top"><span>Sunny</span> Signings</div>
 <div class="nav-logo-sub">Suncoast Mobile Notary</div>
 </a>
-<ul class="nav-links">
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navlinks" onclick="var l=document.getElementById('navlinks');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
+<ul class="nav-links" id="navlinks" onclick="if(event.target.tagName==='A'){this.classList.remove('open')}">
 <li><a href="#services">Services</a></li>
+<li><a href="/free-forms/library/">Free Form Library</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#testimonials">Reviews</a></li>
 <li><a href="/title/">Title Companies</a></li>
@@ -160,6 +164,7 @@ gtag('config', 'G-S9H6G1NXDW');
 <div class="hero-actions">
 <a href="#book" class="btn-primary">Book an Appointment</a>
 <a href="#services" class="btn-outline">Our Services</a>
+<a href="#documents" class="btn-outline">Free Forms &amp; Packets</a>
 </div>
 <div class="hero-areas">
 <span class="hero-areas-label">Serving</span>
@@ -224,6 +229,46 @@ gtag('config', 'G-S9H6G1NXDW');
 <h3>Nationwide Signing Network</h3>
 <p>Need a signing outside our region? Our certified nationwide network handles loan signings and legal documents anywhere in the country.</p>
 </div>
+</div>
+</div>
+</section>
+<section id="documents">
+<div class="section-inner">
+<div class="services-header">
+<div class="section-label">Document services</div>
+<h2 class="section-title">Free forms, a form filler, and a notary when you need one</h2>
+<p class="section-desc">Download official Florida forms free, fill them out yourself, then book a notary when you're ready to sign.</p>
+</div>
+<p style="text-align:center;font-weight:600;color:var(--blue);margin:0 0 1.5rem;letter-spacing:0.02em">1&nbsp; Get the form free &nbsp;&rarr;&nbsp; 2&nbsp; Fill it out yourself &nbsp;&rarr;&nbsp; 3&nbsp; Get it notarized at your door</p>
+<div class="services-grid" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr))">
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+<h3>Free Form Library</h3>
+<p>Official Florida court and Division of Corporations (LLC) forms, linked straight from the source so you always get the current version. No account needed.</p>
+<p style="margin-top:0.75rem"><a href="/free-forms/library/" style="color:var(--blue);font-weight:600;text-decoration:none">Browse the library &rarr;</a></p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg></div>
+<h3>Form Helper</h3>
+<p>Type or speak your own answers into an official PDF, one field at a time, then download the finished form. Free with a packet.</p>
+<p style="margin-top:0.75rem"><a href="/free-forms/helper/" style="color:var(--blue);font-weight:600;text-decoration:none">Open the Form Helper &rarr;</a></p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div>
+<h3>Packets</h3>
+<p>Single Form Packet $24 &middot; LLC Packet $59 &middot; Family Court Packet $99. Each unlocks the Form Helper and a print-ready PDF.</p>
+<p style="margin-top:0.75rem"><a href="/free-forms/packets/" style="color:var(--blue);font-weight:600;text-decoration:none">See packets &rarr;</a></p>
+</div>
+<div class="service-card">
+<div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
+<h3>Notary Visit &amp; Secure Upload</h3>
+<p>$85 per mobile visit in Sarasota County, including one packet or two notarizations, then $10 for each additional. Other areas quoted individually. Send documents ahead through our secure upload.</p>
+<p style="margin-top:0.75rem"><a href="/free-forms/packets/#upload" style="color:var(--blue);font-weight:600;text-decoration:none">Fees &amp; upload &rarr;</a></p>
+</div>
+</div>
+<div class="contact-strip">
+<p><strong>I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF FLORIDA, AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</strong> We can't choose forms for you or tell you what to write. For legal help, see a Florida attorney or the court's self-help program.</p>
+<a href="/free-forms/">Explore all free forms &amp; packets &rarr;</a>
 </div>
 </div>
 </section>
@@ -359,7 +404,7 @@ gtag('config', 'G-S9H6G1NXDW');
 <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
 </p>
 <p style="margin-top:0.75rem;font-size:0.78rem">
-<a href="/title/">Title Companies &amp; Real Estate Attorneys →</a>
+<a href="/title/">Title Companies &amp; Real Estate Attorneys →</a> &nbsp;·&nbsp; <a href="/free-forms/">Free Forms &amp; Packets</a>
 </p>
 <p style="margin-top:1rem;font-size:0.75rem;opacity:0.45">© 2026 Suncoast Mobile Notary · sunnysignings.us · All rights reserved.</p>
 </footer>
