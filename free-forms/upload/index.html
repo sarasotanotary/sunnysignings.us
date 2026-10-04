@@ -97,7 +97,7 @@ footer .notice{color:#fff;font-weight:700;font-size:.85rem}
 <p>Serving <a href="/sarasota/">Sarasota</a> · <a href="/manatee/">Manatee</a> · <a href="/charlotte/">Charlotte</a> · <a href="/lee/">Lee</a> · <a href="/collier/">Collier</a> Counties</p>
 <p><a href="/free-forms/terms/">Terms of use</a> &middot; <a href="/free-forms/privacy/">Privacy policy</a> &middot; <a href="/free-forms/refunds/">Refund policy</a></p>
 <p><a href="tel:9415002495">(941) 500-2495</a> · <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a></p><p>&copy; 2026 Suncoast Mobile Notary · sunnysignings.us</p></div></footer><script>
-(function(){var ENDPOINT="https://sunny-signings-upload.scrappy-stacks.workers.dev/upload",MAXF=10,MAXB=15*1048576,OK=/\.(pdf|jpe?g|png|heic|docx?)$/i;
+(function(){var ENDPOINT="https://upload.sunnysignings.us/upload",MAXF=10,MAXB=15*1048576,OK=/\.(pdf|jpe?g|png|heic|docx?)$/i;
 var f=document.getElementById('uf'),dr=document.getElementById('dr'),fi=document.getElementById('fi'),fl=document.getElementById('fl'),st=document.getElementById('st'),sb=document.getElementById('sb'),files=[];
 function show(c,t){st.className=c;st.textContent=t}
 function render(){fl.innerHTML='';files.forEach(function(x,i){var li=document.createElement('li');li.textContent=x.name+' ('+(x.size/1048576).toFixed(1)+' MB)';var b=document.createElement('button');b.type='button';b.textContent='Remove';b.setAttribute('aria-label','Remove '+x.name);b.onclick=function(){files.splice(i,1);render()};li.appendChild(b);fl.appendChild(li)})}
