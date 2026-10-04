@@ -110,11 +110,11 @@ var CONFIG={
     family:{price:'$99', url:'https://buy.stripe.com/00waEWdknagO0dRfIK1VK02'}
   },
   leadFormEndpoint:'https://formspree.io/f/mrpbnzgl',            // Formspree form URL for the email signup, e.g. https://formspree.io/f/abcdwxyz
-  uploadUrl:'https://form.jotform.com/262747706373162',                   // secure file-request / upload link (Dropbox file request, Google Drive form, etc.)
+  uploadUrl:'/free-forms/upload/',                   // secure file-request / upload link (Dropbox file request, Google Drive form, etc.)
   aiEndpoint:''                   // optional: your Cloudflare Worker URL for the AI instruction lookup
 };
 
-(function(){var u=document.getElementById('uploadbtn'),n=document.getElementById('uploadnote');if(CONFIG.uploadUrl){u.href=CONFIG.uploadUrl;u.target='_blank';u.rel='noopener';u.insertAdjacentHTML('beforeend','<span class="sr"> (opens in a new tab)</span>');u.addEventListener('click',function(){if(window.gtag)gtag('event','document_upload_click')})}else{u.hidden=true;n.innerHTML='To send documents ahead of time, call <a href="tel:9415002495">(941) 500-2495</a> or email <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>.'}})();
+(function(){var u=document.getElementById('uploadbtn'),n=document.getElementById('uploadnote');if(CONFIG.uploadUrl){u.href=CONFIG.uploadUrl;u.addEventListener('click',function(){if(window.gtag)gtag('event','document_upload_click')})}else{u.hidden=true;n.innerHTML='To send documents ahead of time, call <a href="tel:9415002495">(941) 500-2495</a> or email <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>.'}})();
 document.querySelectorAll('.pkg').forEach(function(el){var c=CONFIG.packets[el.getAttribute('data-k')]||{};var b=el.querySelector('[data-buy]'),p=el.querySelector('[data-price]');
 if(c.price)p.textContent=c.price;
 if(c.url){b.href=c.url;b.target='_blank';b.rel='noopener';b.addEventListener('click',function(){if(window.gtag)gtag('event','begin_checkout',{item_name:el.querySelector('h2').textContent})})}
