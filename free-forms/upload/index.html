@@ -87,16 +87,18 @@ footer .notice{color:#fff;font-weight:700;font-size:.85rem}
 <div class="drop" id="dr" tabindex="0" role="button" aria-label="Choose files to upload"><strong>Browse files</strong>or drag and drop here. PDF, JPG, PNG, HEIC, DOC or DOCX. Up to 10 files, 15 MB each.<input id="fi" type="file" multiple hidden accept=".pdf,.jpg,.jpeg,.png,.heic,.doc,.docx"></div>
 <ul id="fl"></ul>
 <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+<div class="cf-turnstile" data-sitekey="0x4AAAAAAFOVMrdNy7p99NX_"></div>
 <div id="st" role="status" aria-live="polite"></div>
 <p style="margin-top:24px"><button class="btn" id="sb" type="submit">Submit</button></p>
 <p class="small">Files are sent over an encrypted connection and stored privately. Questions? Call <a href="tel:9415002495">(941) 500-2495</a>.</p>
 </form></main>
 <footer class="site"><div class="in"><div><div class="footer-logo-top"><span>Sunny</span> Signings</div><div class="footer-logo-sub">Suncoast Mobile Notary</div></div>
 <p class="notice">I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF FLORIDA, AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
+<p class="notice" lang="es">NO SOY ABOGADO(A) AUTORIZADO(A) PARA EJERCER LA ABOGACÍA EN EL ESTADO DE FLORIDA, Y NO PUEDO DAR ASESORÍA LEGAL NI ACEPTAR HONORARIOS POR ASESORÍA LEGAL.</p>
 <p>Suncoast Mobile Notary is a notary and document services business, not a law firm. We cannot tell you which form you need, what to write on it, or what it means legally. Forms come free from the agencies that issue them; we link to the source and keep no copies. Packets pay for our tools and convenience.</p>
 <p>Serving <a href="/sarasota/">Sarasota</a> · <a href="/manatee/">Manatee</a> · <a href="/charlotte/">Charlotte</a> · <a href="/lee/">Lee</a> · <a href="/collier/">Collier</a> Counties</p>
 <p><a href="/free-forms/terms/">Terms of use</a> &middot; <a href="/free-forms/privacy/">Privacy policy</a> &middot; <a href="/free-forms/refunds/">Refund policy</a></p>
-<p><a href="tel:9415002495">(941) 500-2495</a> · <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a></p><p>&copy; 2026 Suncoast Mobile Notary · sunnysignings.us</p></div></footer><script>
+<p><a href="tel:9415002495">(941) 500-2495</a> · <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a></p><p>&copy; 2026 Suncoast Mobile Notary · sunnysignings.us</p></div></footer><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script><script>
 (function(){var ENDPOINT="https://upload.sunnysignings.us/upload",MAXF=10,MAXB=15*1048576,OK=/\.(pdf|jpe?g|png|heic|docx?)$/i;
 var f=document.getElementById('uf'),dr=document.getElementById('dr'),fi=document.getElementById('fi'),fl=document.getElementById('fl'),st=document.getElementById('st'),sb=document.getElementById('sb'),files=[];
 function show(c,t){st.className=c;st.textContent=t}
@@ -111,5 +113,5 @@ f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f)
 if(!d.get('first').trim()||!d.get('last').trim()||!/^\S+@\S+\.\S+$/.test(d.get('email')))return show('err','Please enter your name and a valid email.');
 if(!files.length)return show('err','Please add at least one document.');
 files.forEach(function(x){d.append('files',x,x.name)});sb.disabled=true;show('ok','Uploading...');
-fetch(ENDPOINT,{method:'POST',body:d}).then(function(r){if(!r.ok)return r.json().catch(function(){return{}}).then(function(j){throw new Error(j.error||'Upload failed')});Array.prototype.forEach.call(f.children,function(c){if(c!==st)c.style.display='none'});show('ok','Thank you. We received your documents and will confirm your appointment shortly.');if(window.gtag)gtag('event','document_upload_done')}).catch(function(err){sb.disabled=false;show('err',err.message+'. Please try again or call (941) 500-2495.')})});
+fetch(ENDPOINT,{method:'POST',body:d}).then(function(r){if(!r.ok)return r.json().catch(function(){return{}}).then(function(j){throw new Error(j.error||'Upload failed')});Array.prototype.forEach.call(f.children,function(c){if(c!==st)c.style.display='none'});show('ok','Thank you. We received your documents and will confirm your appointment shortly.');if(window.gtag)gtag('event','document_upload_done')}).catch(function(err){sb.disabled=false;if(window.turnstile)turnstile.reset();show('err',err.message+'. Please try again or call (941) 500-2495.')})});
 })();</script></body></html>
