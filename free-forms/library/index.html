@@ -95,4 +95,19 @@ lib.innerHTML=Object.keys(g).map(function(k){return '<h2>'+esc(k)+'</h2><div cla
 cnt.textContent=shown.length?shown.length+' of '+F.length+' forms':'No forms match. Try a shorter search, or check the resources page.'}
 q.addEventListener('input',draw);draw();
 lib.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a.dl');if(a&&window.gtag)gtag('event','form_download',{form_name:a.getAttribute('data-form')})});
-</script></body></html>
+</script>
+<script>
+(function(){
+  function fix(){
+    document.querySelectorAll('#lib .card').forEach(function(c){
+      var dl=c.querySelector('a.dl'), h=c.querySelector('a.go[href="/free-forms/helper/"]');
+      if(!dl||!h) return;
+      h.href='/free-forms/fill/?src='+encodeURIComponent(dl.href);
+      h.textContent='Fill it free →';
+    });
+  }
+  var lib=document.getElementById('lib');
+  if(lib){ new MutationObserver(fix).observe(lib,{childList:true,subtree:true}); fix(); }
+})();
+</script>
+</body></html>
