@@ -98,12 +98,18 @@ lib.addEventListener('click',function(e){var a=e.target.closest&&e.target.closes
 </script>
 <script>
 (function(){
+  var P='https://forms.sunnysignings.us/?src=';
   function fix(){
     document.querySelectorAll('#lib .card').forEach(function(c){
-      var dl=c.querySelector('a.dl'), h=c.querySelector('a.go[href="/free-forms/helper/"]');
-      if(!dl||!h) return;
-      h.href='/free-forms/fill/?src='+encodeURIComponent(dl.href);
-      h.textContent='Fill it free →';
+      var dl=c.querySelector('a.dl');
+      if(!dl||dl.dataset.done) return;
+      var src=dl.dataset.src||dl.href; dl.dataset.src=src; dl.dataset.done='1';
+      var off=document.createElement('a'); off.className='go'; off.href=src; off.target='_blank'; off.rel='noopener'; off.textContent='Official source →';
+      dl.href=P+encodeURIComponent(src)+'&dl=1'; dl.removeAttribute('target'); dl.removeAttribute('rel');
+      dl.innerHTML='Download blank PDF →';
+      var h=c.querySelector('a.go[href="/free-forms/helper/"]');
+      if(h){ h.href='/free-forms/fill/?src='+encodeURIComponent(src); h.textContent='Fill it free →'; h.insertAdjacentElement('afterend',off); }
+      else dl.insertAdjacentElement('afterend',off);
     });
   }
   var lib=document.getElementById('lib');
