@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /free-forms/upload/
+
+Sitemap: https://sunnysignings.us/free-forms/sitemap-free-forms.xml
