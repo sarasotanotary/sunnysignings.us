@@ -266,7 +266,9 @@ gtag('config', 'G-S9H6G1NXDW');
 <a href="/search/" class="nav-search" aria-label="Search the site"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></a>
 <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navlinks" onclick="var l=document.getElementById('navlinks');var o=l.classList.toggle('open');this.setAttribute('aria-expanded',o)">Menu</button>
 <ul class="nav-links" id="navlinks" onclick="if(event.target.tagName==='A'){this.classList.remove('open')}">
-<li><a href="#services">Services</a></li>
+<li class="nav-dropdown"><a href="#services" onclick="if(window.innerWidth<=900){event.preventDefault();event.stopPropagation();this.closest('li').classList.toggle('open')}">Services</a>
+<ul class="nav-dropdown-menu"><li><a href="/free-forms/document-prep/">Document Preparation Service</a></li><li><a href="#svc-notary">Mobile Notary</a></li><li><a href="#svc-signing">Certified Loan Signing Agent</a></li><li><a href="/title/">Signing Service</a></li><li><a href="#svc-apostille">Apostille</a></li><li><a href="#svc-vin">Auto VIN Verification</a></li><li><a href="#svc-draw">Draw Inspections</a></li></ul>
+</li>
 <li class="nav-dropdown"><a href="/free-forms/document-prep/" onclick="if(window.innerWidth<=900){event.preventDefault();event.stopPropagation();this.closest('li').classList.toggle('open')}">Documents</a>
 <ul class="nav-dropdown-menu"><li><a href="/free-forms/document-prep/">Document Prep</a></li><li><a href="/free-forms/library/">Form Library</a></li><li><a href="/free-forms/helper/">Form Helper</a></li><li><a href="/tools/">PDF Tools</a></li></ul>
 </li>
@@ -350,17 +352,17 @@ gtag('config', 'G-S9H6G1NXDW');
 <p class="section-desc">From routine notarizations to typed-up paperwork and complex real estate closings — professional service delivered to your door anywhere in Southwest Florida.</p>
 </div>
 <div class="services-grid">
-<div class="service-card">
+<div class="service-card" id="svc-notary">
 <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div>
 <h3>Mobile Notary</h3>
 <p>We come to you — home, condo, hotel, office, or hospital. Powers of attorney, wills, trusts, affidavits, and more. Flexible scheduling on your terms.</p>
 </div>
-<div class="service-card">
+<div class="service-card" id="svc-signing">
 <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg></div>
 <h3>Loan Signing Agent</h3>
 <p>Purchase closings, refinances, and HELOCs for title agents and lenders. Accurate, efficient, and stress-free every time.</p>
 </div>
-<div class="service-card">
+<div class="service-card" id="svc-docprep">
 <div class="service-icon"><svg viewBox="0 0 24 24"><path d="M9 5a2 2 0 012-2h2a2 2 0 012 2m-7 0h8a1 1 0 011 1v13a2 2 0 01-2 2H8a2 2 0 01-2-2V6a1 1 0 011-1zm1 9l2 2 4-4"/></svg></div>
 <h3>Document Preparation</h3>
 <p>LLC formation, a name change, divorce paperwork, and more — typed up from the information you give us. Not legal advice, just done right.</p>
@@ -388,9 +390,9 @@ gtag('config', 'G-S9H6G1NXDW');
 <div class="services-secondary">
 <div class="services-secondary-label">Also available</div>
 <div class="services-grid-sm">
-<div class="service-card-sm"><h4>Apostille Service</h4><p>Documents authenticated for international use.</p></div>
-<div class="service-card-sm"><h4>Auto Title &amp; VIN Verification</h4><p>Title transfers, bills of sale, and DMV documents.</p></div>
-<div class="service-card-sm"><h4>Construction Draw Inspections</h4><p>Field and draw inspections for lenders.</p></div>
+<div class="service-card-sm" id="svc-apostille"><h4>Apostille Service</h4><p>Documents authenticated for international use.</p></div>
+<div class="service-card-sm" id="svc-vin"><h4>Auto Title &amp; VIN Verification</h4><p>Title transfers, bills of sale, and DMV documents.</p></div>
+<div class="service-card-sm" id="svc-draw"><h4>Construction Draw Inspections</h4><p>Field and draw inspections for lenders.</p></div>
 <div class="service-card-sm"><h4>Nationwide Signing Network</h4><p>Certified network for signings outside our region.</p></div>
 </div>
 </div>
