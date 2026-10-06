@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://sunnysignings.us/</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://sunnysignings.us/</loc><lastmod>2026-10-06</lastmod></url>
   <url><loc>https://sunnysignings.us/sarasota/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://sunnysignings.us/manatee/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://sunnysignings.us/charlotte/</loc><lastmod>2026-10-05</lastmod></url>
@@ -12,4 +12,8 @@
   <url><loc>https://sunnysignings.us/free-forms/helper/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://sunnysignings.us/free-forms/packets/</loc><lastmod>2026-10-05</lastmod></url>
   <url><loc>https://sunnysignings.us/free-forms/resources/</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://sunnysignings.us/tools/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://sunnysignings.us/tools/merge-pdf/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://sunnysignings.us/tools/jpg-pdf/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://sunnysignings.us/tools/rotate-pdf/</loc><lastmod>2026-10-06</lastmod></url>
 </urlset>
