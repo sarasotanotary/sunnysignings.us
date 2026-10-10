@@ -72,6 +72,9 @@ footer.site{background:var(--text);color:#cfe3f3;padding-block:32px 44px;font-si
 footer.site .in{display:grid;gap:10px}footer.site p{max-width:76ch;margin:.2rem 0}footer.site a{color:var(--yellow)}
 .footer-logo-top{font:600 1.3rem var(--serif);color:#fff}.footer-logo-top span{color:var(--yellow);font-style:italic}.footer-logo-sub{font:500 .62rem var(--sans);letter-spacing:.17em;text-transform:uppercase;color:#9fc3dc}
 footer .notice{color:#fff;font-weight:700;font-size:.85rem}
+dialog.review{border:0;border-radius:12px;padding:0;max-width:560px;width:calc(100% - 32px);color:var(--text);box-shadow:0 20px 60px rgba(10,58,92,.35)}dialog.review::backdrop{background:rgba(10,58,92,.55)}
+dialog.review .box{padding:22px 24px}dialog.review h2{margin:0 0 .2rem;font-size:1.4rem}dialog.review h3{font:700 .8rem var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--text-muted);margin:1.1rem 0 .2rem}dialog.review ul{padding-left:1.1rem;margin:.2rem 0}dialog.review li{margin:.3rem 0;font-size:.97rem}
+dialog.review .price{font:600 1.7rem var(--serif)}dialog.review .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:1.3rem}dialog.review .fine{font-size:.85rem;color:var(--text-muted);margin-top:.9rem}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style><script async src="https://www.googletagmanager.com/gtag/js?id=G-S9H6G1NXDW"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-S9H6G1NXDW');</script></head><body><a class="skip" href="#main">Skip to main content</a><header class="top"><div class="in"><a href="/" class="nav-logo"><div class="nav-logo-top"><span>Sunny</span> Signings</div><div class="nav-logo-sub">Suncoast Mobile Notary</div></a><nav aria-label="Main"><ul class="nav-links"><li><a href="/#services">Services</a></li><li><a href="/#about">About</a></li><li><a href="/#testimonials">Reviews</a></li><li><a href="/title/">Title Companies</a></li><li><a href="/free-forms/">Free Forms</a></li><li><a href="/tools/">PDF Tools</a></li><li><a href="/search/">Search</a></li><li><a href="tel:9415002495">(941) 500-2495</a></li><li><a class="nav-cta" href="/#book">Book Now</a></li></ul></nav></div></header>
 <div class="subnav"><div class="in"><nav class="row" style="gap:4px 22px" aria-label="Free forms section"><a href="/free-forms/">Free forms</a><a href="/free-forms/library/">Form library</a><a href="/free-forms/divorce/">Divorce</a><a href="/free-forms/document-prep/">Document Prep</a><a href="/free-forms/packets/" aria-current="page">Packets</a><a href="/free-forms/helper/">Form Helper</a><a href="/free-forms/resources/">Resources</a></nav></div></div>
@@ -80,6 +83,8 @@ footer .notice{color:#fff;font-weight:700;font-size:.85rem}
 <div class="pkg" data-k="llc"><span class="meta">Division of Corporations LLC forms</span><h2 style="font-size:1.15rem;margin:0">LLC Packet</h2><div class="price" data-price>Price at checkout</div><ul><li>Form Helper access for the LLC forms</li><li>Print-ready finished PDF</li><li>A reminder of what photo ID a notary needs</li><li>Book a notary appointment when you are ready</li></ul><a class="btn" data-buy href="#">Buy this packet</a></div>
 <div class="pkg" data-k="family"><span class="meta">12th Judicial Circuit family forms</span><h2 style="font-size:1.15rem;margin:0">Family Court Packet</h2><div class="price" data-price>Price at checkout</div><ul><li>Form Helper access for the family forms, including the Sarasota, Manatee and DeSoto <a href="/free-forms/divorce/#packets">divorce packets</a></li><li>Completed Disclosure from Nonlawyer form (Form 12.900(a))</li><li>Print-ready finished PDFs</li><li>Book a notary appointment when you are ready</li></ul><a class="btn" data-buy href="#">Buy this packet</a></div>
 <div class="pkg" data-k="single"><span class="meta">Any official PDF form</span><h2 style="font-size:1.15rem;margin:0">Single Form Packet</h2><div class="price" data-price>Price at checkout</div><ul><li>Form Helper access for one form you upload</li><li>Print-ready finished PDF</li><li>Book a notary appointment when you are ready</li></ul><a class="btn" data-buy href="#">Buy this packet</a></div></div>
+<h2>How buying a packet works</h2>
+<ol class="steps"><li><b>Choose a packet</b><span>Pick the one that matches the kind of form you need to fill out. Each button shows exactly what you get before you pay.</span></li><li><b>Pay securely</b><span>Checkout is handled by Stripe. We never see your card number.</span></li><li><b>Get your access code</b><span>After you pay, you receive an access code for the Form Helper. Enter it on the <a href="/free-forms/helper/">Form Helper page</a>, add your form, and download the finished PDF.</span></li></ol>
 <h2>What a packet includes</h2>
 <p>The Form Helper reads the fields in the official PDF you give it, asks for your answer to each one in turn, lets you speak instead of type, formats dates and phone numbers, shows what the form's own instructions say about a field when you paste them in, and builds the finished PDF. Your answers are always your own words. After you buy, you receive an access code for the Form Helper.</p>
 <h2>What a packet does not include</h2>
@@ -96,6 +101,12 @@ footer .notice{color:#fff;font-weight:700;font-size:.85rem}
 <p><a class="btn" id="uploadbtn" href="#">Secure document upload</a></p><p id="uploadnote" class="small"></p>
 <p><a class="btn outline" href="/#book">Book a notary appointment</a></p>
 <p class="small">Questions before you buy? Email <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>.</p></main>
+<dialog class="review" id="review" aria-labelledby="rv-title"><div class="box"><span class="meta" id="rv-for"></span><h2 id="rv-title"></h2><div class="price" id="rv-price"></div><p id="rv-what" style="margin:.5rem 0 0"></p>
+<h3>You get</h3><ul id="rv-gets"></ul>
+<h3>How it works</h3><ul><li>You pay on Stripe's secure checkout page.</li><li>You then receive an access code for the Form Helper.</li><li>Enter the code at <a href="/free-forms/helper/">sunnysignings.us/free-forms/helper</a>, answer each field in your own words, and download your finished PDF.</li></ul>
+<h3>Not included</h3><ul><li>Legal advice, help choosing a form, or suggestions for what to write.</li><li>A notary visit. That is booked and paid separately (see fees below).</li></ul>
+<div class="acts"><a class="btn" id="rv-go" href="#" target="_blank" rel="noopener">Continue to secure checkout</a><button type="button" class="btn outline" id="rv-close">Go back</button></div>
+<p class="fine">Questions first? Email <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>. See our <a href="/free-forms/refunds/">refund policy</a> and <a href="/free-forms/terms/">terms</a>.</p></div></dialog>
 <footer class="site"><div class="in"><div><div class="footer-logo-top"><span>Sunny</span> Signings</div><div class="footer-logo-sub">Suncoast Mobile Notary</div></div>
 <p class="notice">I AM NOT AN ATTORNEY LICENSED TO PRACTICE LAW IN THE STATE OF FLORIDA, AND I MAY NOT GIVE LEGAL ADVICE OR ACCEPT FEES FOR LEGAL ADVICE.</p>
 <p class="notice" lang="es">NO SOY ABOGADO(A) AUTORIZADO(A) PARA EJERCER LA ABOGACÍA EN EL ESTADO DE FLORIDA, Y NO PUEDO DAR ASESORÍA LEGAL NI ACEPTAR HONORARIOS POR ASESORÍA LEGAL.</p>
@@ -116,8 +127,24 @@ var CONFIG={
 };
 
 (function(){var u=document.getElementById('uploadbtn'),n=document.getElementById('uploadnote');if(CONFIG.uploadUrl){u.href=CONFIG.uploadUrl;u.addEventListener('click',function(){if(window.gtag)gtag('event','document_upload_click')})}else{u.hidden=true;n.innerHTML='To send documents ahead of time, call <a href="tel:9415002495">(941) 500-2495</a> or email <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>.'}})();
+var DETAILS={
+  llc:{what:'Use this if you are forming a Florida LLC and need to fill out the Division of Corporations forms. The Form Helper walks you through each field of the official PDF.',gets:['Form Helper access for the LLC forms','Print-ready finished PDF','A reminder of what photo ID a notary needs','Book a notary appointment when you are ready']},
+  family:{what:'Use this for Florida family court forms, including the Sarasota, Manatee and DeSoto divorce packets. The Form Helper walks you through each field of the official PDFs.',gets:['Form Helper access for the family forms','Completed Disclosure from Nonlawyer form (Form 12.900(a))','Print-ready finished PDFs','Book a notary appointment when you are ready']},
+  single:{what:'Use this for one official PDF form of your choice. You upload the form, and the Form Helper walks you through each field.',gets:['Form Helper access for one form you upload','Print-ready finished PDF','Book a notary appointment when you are ready']}
+};
+var dlg=document.getElementById('review');
+function openReview(el,c){var k=el.getAttribute('data-k'),d=DETAILS[k];if(!d||!dlg||!dlg.showModal)return false;
+document.getElementById('rv-for').textContent=el.querySelector('.meta').textContent;
+document.getElementById('rv-title').textContent=el.querySelector('h2').textContent;
+document.getElementById('rv-price').textContent=c.price||'';
+document.getElementById('rv-what').textContent=d.what;
+document.getElementById('rv-gets').innerHTML=d.gets.map(function(g){return '<li>'+g+'</li>'}).join('');
+var go=document.getElementById('rv-go');go.href=c.url;
+go.onclick=function(){if(window.gtag)gtag('event','begin_checkout',{item_name:el.querySelector('h2').textContent})};
+dlg.showModal();if(window.gtag)gtag('event','view_packet_details',{item_name:el.querySelector('h2').textContent});return true}
+if(dlg){document.getElementById('rv-close').addEventListener('click',function(){dlg.close()});dlg.addEventListener('click',function(e){if(e.target===dlg)dlg.close()})}
 document.querySelectorAll('.pkg').forEach(function(el){var c=CONFIG.packets[el.getAttribute('data-k')]||{};var b=el.querySelector('[data-buy]'),p=el.querySelector('[data-price]');
 if(c.price)p.textContent=c.price;
-if(c.url){b.href=c.url;b.target='_blank';b.rel='noopener';b.addEventListener('click',function(){if(window.gtag)gtag('event','begin_checkout',{item_name:el.querySelector('h2').textContent})})}
+if(c.url){b.href=c.url;b.target='_blank';b.rel='noopener';b.textContent='See what\u2019s included and buy';b.addEventListener('click',function(e){if(openReview(el,c))e.preventDefault()})}
 else{b.textContent='Ask about this packet';b.href='mailto:orders@sunnysignings.us?subject='+encodeURIComponent('Packet: '+el.querySelector('h2').textContent)}});
 </script></body></html>
