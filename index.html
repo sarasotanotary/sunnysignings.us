@@ -270,6 +270,11 @@ gtag('config', 'G-S9H6G1NXDW');
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
+<style>.wxbar{background:#E0F6FF;border-bottom:1px solid #cfe6f3;font:500 .82rem/1.2 'DM Sans',system-ui,sans-serif;color:#0A3A5C;text-align:center;padding:7px 12px}.wxbar a{color:#006FA3;text-decoration:none;font-weight:600}.wxbar a:hover{text-decoration:underline}</style>
+<div class="wxbar" id="wxbar"><a href="/weather/" id="wxlink">&#9728;&#65039; Sarasota weather &rarr;</a></div>
+<script>(function(){var W={0:['Clear','☀️'],1:['Mostly clear','🌤️'],2:['Partly cloudy','⛅'],3:['Overcast','☁️'],45:['Fog','🌫️'],48:['Fog','🌫️'],51:['Drizzle','🌦️'],53:['Drizzle','🌦️'],55:['Drizzle','🌧️'],61:['Light rain','🌦️'],63:['Rain','🌧️'],65:['Heavy rain','🌧️'],80:['Showers','🌦️'],81:['Showers','🌧️'],82:['Heavy showers','⛈️'],95:['Thunderstorms','⛈️'],96:['Thunderstorms','⛈️'],99:['Thunderstorms','⛈️']};
+fetch('https://api.open-meteo.com/v1/forecast?latitude=27.3364&longitude=-82.5307&current=temperature_2m,weather_code&temperature_unit=fahrenheit&timezone=America%2FNew_York').then(function(r){return r.json()}).then(function(d){var c=d.current,w=W[c.weather_code]||['Weather','🌡️'];document.getElementById('wxlink').textContent=w[1]+' Sarasota '+Math.round(c.temperature_2m)+'°F, '+w[0]+' · Full forecast →'}).catch(function(){})})();</script>
+
 <nav>
 <a href="/" class="nav-logo" style="text-decoration:none">
 <div class="nav-logo-top"><span>Sunny</span> Signings</div>
@@ -283,7 +288,7 @@ gtag('config', 'G-S9H6G1NXDW');
 <ul class="nav-dropdown-menu"><li><a href="/free-forms/document-prep/">Document Preparation Service</a></li><li><a href="/services/divorce-paperwork-assistance/">Divorce Paperwork Assistance</a></li><li><a href="/services/living-trust-documents/">Living Trust Documents</a></li><li><a href="/services/estate-planning-documents/">Estate Planning Documents</a></li><li><a href="/services/court-filing-assistance/">Court Filing Assistance</a></li><li><a href="/services/mobile-notary/">Mobile Notary Services</a></li><li><a href="/services/">All service pages</a></li><li><a href="#svc-notary">Mobile Notary</a></li><li><a href="#svc-signing">Certified Loan Signing Agent</a></li><li><a href="/title/">Signing Service</a></li><li><a href="#svc-apostille">Apostille</a></li><li><a href="#svc-vin">Auto VIN Verification</a></li><li><a href="#svc-draw">Field Inspections</a></li></ul>
 </li>
 <li class="nav-dropdown"><a href="/free-forms/document-prep/" onclick="if(window.innerWidth<=900){event.preventDefault();event.stopPropagation();this.closest('li').classList.toggle('open')}">Documents</a>
-<ul class="nav-dropdown-menu"><li><a href="/free-forms/document-prep/">Document Prep</a></li><li><a href="/free-forms/library/">Form Library</a></li><li><a href="/free-forms/helper/">Form Helper</a></li><li><a href="/free-forms/">Free Forms &amp; Packets</a></li><li><a href="/tools/">PDF Tools</a></li><li><a href="/weather/">Free Weather</a></li><li><a href="/blog/">Guides</a></li></ul>
+<ul class="nav-dropdown-menu"><li><a href="/free-forms/document-prep/">Document Prep</a></li><li><a href="/free-forms/library/">Form Library</a></li><li><a href="/free-forms/helper/">Form Helper</a></li><li><a href="/free-forms/">Free Forms &amp; Packets</a></li><li><a href="/tools/">PDF Tools</a></li><li><a href="/blog/">Guides</a></li></ul>
 </li>
 <li><a href="#about">About</a></li>
 <li><a href="#testimonials">Reviews</a></li>
@@ -692,7 +697,7 @@ gtag('config', 'G-S9H6G1NXDW');
 <a href="mailto:orders@sunnysignings.us">orders@sunnysignings.us</a>
 </p>
 <p style="margin-top:0.75rem;font-size:0.78rem">
-<a href="/title/">Title Companies &amp; Real Estate Attorneys →</a> &nbsp;·&nbsp; <a href="/free-forms/">Free Forms &amp; Packets</a> &nbsp;·&nbsp; <a href="/services/">All Services</a> &nbsp;·&nbsp; <a href="/blog/">Guides</a> &nbsp;·&nbsp; <a href="/weather/">Free Weather</a>
+<a href="/title/">Title Companies &amp; Real Estate Attorneys →</a> &nbsp;·&nbsp; <a href="/free-forms/">Free Forms &amp; Packets</a> &nbsp;·&nbsp; <a href="/services/">All Services</a> &nbsp;·&nbsp; <a href="/blog/">Guides</a>
 </p>
 <p style="margin-top:1rem;font-size:0.75rem;opacity:0.45">© 2026 Suncoast Mobile Notary · sunnysignings.us · All rights reserved.</p>
 </footer>
